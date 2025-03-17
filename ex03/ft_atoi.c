@@ -15,7 +15,7 @@ int	checkch(char c)
 		return (1);
 	if (c == ' ' || c == '-' || c == '+' || c == '\t')
 		return (1);
-	if (c == '\v' || c == '\n' || c == '\r' || c == 'f')
+	if (c == '\v' || c == '\n' || c == '\r' || c == '\f')
 		return (1);
 	return (0);
 }
