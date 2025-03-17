@@ -49,7 +49,7 @@ void	ft_putnbr_base(int nbr, char *base)
 		return ;
 	
 }
-int	main(void)
+/*int	main(void)
 {
 	return (0);
-}
+}*/
