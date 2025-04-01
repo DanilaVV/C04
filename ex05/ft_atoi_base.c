@@ -1,6 +1,15 @@
 #include <unistd.h>
 #include <stdio.h>
 
+int	wh_sp(char c)
+{
+	if (c == ' ' || c == '\t' || c == '\n')
+		return (1);
+	if (c == '\v' || c == '\r' || c == '\f')
+		return (1);
+	return (0);
+}
+
 int	ft_condition(char *base)
 {
 	int	i;
@@ -10,7 +19,7 @@ int	ft_condition(char *base)
 	while (base[i])
 	{
 		j = i + 1;
-		if (base[i] == '+' || base[i] == '-')
+		if (base[i] == '+' || base[i] == '-' || wh_sp(base[i]))
 			return (0);
 		while (base[j])
 		{
@@ -30,15 +39,6 @@ int	numb(char c)
 	if (c >= '0' && c <= '9')
 		return (c - '0');
 	return (c + 10 - 'A' );
-}
-
-int	wh_sp(char c)
-{
-	if (c == ' ' || c == '\t' || c == '\n')
-		return (1);
-	if (c == '\v' || c == '\r' || c == '\f')
-		return (1);
-	return (0);
 }
 
 int	negative(char c)
